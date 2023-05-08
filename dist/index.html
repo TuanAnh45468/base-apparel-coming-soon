@@ -21,36 +21,42 @@
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
-  <body class="min-h-screen flex flex-col justify-center">
-    <header>
-      <img alt="" src="images/logo.svg" />
-    </header>
-    <main>
+  <body class="flex min-h-screen flex-col items-center px-5 py-5">
+    <main class="grid gap-y-16 mobile:w-[335px]">
+      <img alt="" class="mobile:mb-[-31px]" src="images/logo.svg" />
       <!--Hero-->
-      <section>
+      <section class="mobile:mx-[-1.25rem]">
         <img alt="" class="laptop:hidden" src="images/hero-mobile.jpg" />
         <img alt="" class="max-laptop:hidden" src="images/hero-desktop.jpg" />
       </section>
 
       <!--coming-soon-->
-      <section>
-        <h1>We're coming soon</h1>
+      <section class="flex w-full flex-col justify-center gap-y-8">
+        <h1
+          class="text-center text-5xl uppercase tracking-widest font-semi-bold"
+        >
+          <span class="text-soft-red">We're</span>
+          <span>coming soon</span>
+        </h1>
 
-        <p>
+        <p class="text-center text-desaturated-red">
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
 
-        <form>
+        <form class="flex justify-center relative">
           <label for="email"></label>
           <input
+            class="border border-desaturated-red w-[80%] h-[42px] rounded-full pl-5"
             id="email"
             name="email"
             placeholder="Email Address"
             type="email"
           />
-          <button type="submit">submit</button>
+          <button class="flex items-center absolute right-[32px] justify-center rounded-full h-[42px] w-[64px] bg-light-red" type="submit">
+            <img alt="" src="images/icon-arrow.svg" />
+          </button>
         </form>
       </section>
     </main>
