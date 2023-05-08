@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      href="images/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="output.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body class="min-h-screen flex flex-col justify-center">
+    <header>
+      <img alt="" src="images/logo.svg" />
+    </header>
+    <main>
+      <!--Hero-->
+      <section>
+        <img alt="" class="laptop:hidden" src="images/hero-mobile.jpg" />
+        <img alt="" class="max-laptop:hidden" src="images/hero-desktop.jpg" />
+      </section>
+
+      <!--coming-soon-->
+      <section>
+        <h1>We're coming soon</h1>
+
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <form>
+          <label for="email"></label>
+          <input
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            type="email"
+          />
+          <button type="submit">submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
