@@ -17,48 +17,55 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <link href="output.css" rel="stylesheet" />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
-  <body class="flex min-h-screen flex-col items-center px-5 py-5">
-    <main class="grid gap-y-16 mobile:w-[335px]">
-      <img alt="" class="mobile:mb-[-31px]" src="images/logo.svg" />
+  <body class="flex min-h-screen flex-col items-center laptop:px-0 px-5 laptop:py-0 py-5">
+    <main class="grid laptop:h-full laptop:w-full laptop:grid-cols-2 gap-y-16 mobile:w-[335px]">
+      <img alt="" class="laptop:mt-8 mobile:mb-[-31px] laptop:pl-[165px]" src="images/logo.svg" />
+
       <!--Hero-->
-      <section class="mobile:mx-[-1.25rem]">
+      <section class="laptop:row-span-2 laptop:mx-0 laptop:ml-auto mobile:mx-[-1.25rem]">
         <img alt="" class="laptop:hidden" src="images/hero-mobile.jpg" />
-        <img alt="" class="max-laptop:hidden" src="images/hero-desktop.jpg" />
+        <img alt="" class="max-laptop:hidden h-screen" src="images/hero-desktop.jpg" />
       </section>
 
       <!--coming-soon-->
-      <section class="flex w-full flex-col justify-center gap-y-8">
+      <section class="flex w-full flex-col justify-center gap-y-8 laptop:w-[84%] laptop:pl-[165px] laptop:mb-[115px]">
         <h1
-          class="text-center text-5xl uppercase tracking-widest font-semi-bold"
+          class="laptop:text-left text-center text-5xl laptop:text-7xl uppercase tracking-widest"
         >
-          <span class="text-soft-red">We're</span>
-          <span>coming soon</span>
+          <span class="font-light text-desaturated-red">We're</span>
+          <span class="font-semi-bold">coming soon</span>
         </h1>
 
-        <p class="text-center text-desaturated-red">
+        <p class="laptop:text-left text-center text-desaturated-red">
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
 
-        <form class="flex justify-center relative">
-          <label for="email"></label>
-          <input
-            class="border border-desaturated-red w-[80%] h-[42px] rounded-full pl-5"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-            type="email"
-          />
-          <button class="flex items-center absolute right-[32px] justify-center rounded-full h-[42px] w-[64px] bg-light-red" type="submit">
+        <form class="relative flex laptop:w-full laptop:justify-start mobile:justify-center" onsubmit="checkEmail(event)">
+          <div class="relative flex w-full flex-col">
+            <label for="email"></label>
+            <input
+                    class="w-full font-semi-bold rounded-full border pl-5 border-desaturated-red outline-desaturated-red h-[42px] laptop:h-[58px]"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+            />
+            <small class="hidden pl-5 text-sm text-soft-red" id="emailError">Please provide a valid email</small>
+            <img alt="" class="absolute hidden w-[24px] h-[24px] top-[9px] right-[70px] laptop:top-[17px] laptop:right-[100px]" id="errorIcon" src="images/icon-error.svg">
+          </div>
+
+          <button aria-label="Submit" class="absolute duration-300 shadow-2xl hover:bg-pink right-0 flex items-center justify-center rounded-full laptop:right-[-1px] h-[42px] laptop:h-[58px] w-[64px] laptop:w-[87px] bg-light-red" type="submit">
             <img alt="" src="images/icon-arrow.svg" />
           </button>
         </form>
       </section>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -536,20 +536,16 @@ body {
   position: relative;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .right-0 {
   right: 0px;
 }
 
-.right-\[66px\] {
-  right: 66px;
+.right-\[70px\] {
+  right: 70px;
 }
 
-.right-\[32px\] {
-  right: 32px;
+.top-\[9px\] {
+  top: 9px;
 }
 
 .flex {
@@ -560,32 +556,36 @@ body {
   display: grid;
 }
 
-.h-\[50px\] {
-  height: 50px;
+.hidden {
+  display: none;
+}
+
+.h-\[24px\] {
+  height: 24px;
 }
 
 .h-\[42px\] {
   height: 42px;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-\[80\%\] {
-  width: 80%;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-\[50px\] {
-  width: 50px;
+.w-\[24px\] {
+  width: 24px;
 }
 
 .w-\[64px\] {
   width: 64px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-col {
@@ -600,12 +600,12 @@ body {
   justify-content: center;
 }
 
-.gap-y-8 {
-  row-gap: 2rem;
-}
-
 .gap-y-16 {
   row-gap: 4rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
 }
 
 .rounded-full {
@@ -616,9 +616,8 @@ body {
   border-width: 1px;
 }
 
-.border-soft-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 93% 68% / var(--tw-border-opacity));
+.border-\[2px\] {
+  border-width: 2px;
 }
 
 .border-desaturated-red {
@@ -626,9 +625,9 @@ body {
   border-color: hsl(0 36% 70% / var(--tw-border-opacity));
 }
 
-.bg-desaturated-red {
-  --tw-bg-opacity: 1;
-  background-color: hsl(0 36% 70% / var(--tw-bg-opacity));
+.border-soft-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 93% 68% / var(--tw-border-opacity));
 }
 
 .bg-light-red {
@@ -659,9 +658,13 @@ body {
   line-height: 1;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .font-semi-bold {
@@ -676,14 +679,43 @@ body {
   letter-spacing: 0.1em;
 }
 
+.text-desaturated-red {
+  --tw-text-opacity: 1;
+  color: hsl(0 36% 70% / var(--tw-text-opacity));
+}
+
 .text-soft-red {
   --tw-text-opacity: 1;
   color: hsl(0 93% 68% / var(--tw-text-opacity));
 }
 
-.text-desaturated-red {
-  --tw-text-opacity: 1;
-  color: hsl(0 36% 70% / var(--tw-text-opacity));
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-dark-grayish-red {
+  --tw-shadow-color: hsl(0, 6%, 24%);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.outline-desaturated-red {
+  outline-color: hsl(0, 36%, 70%);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.hover\:bg-light-red:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 151 152 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-pink:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 205 206 / var(--tw-bg-opacity));
 }
 
 @media not all and (min-width: 1440px) {
@@ -698,14 +730,6 @@ body {
     margin-right: -1.25rem;
   }
 
-  .mobile\:mb-\[-2\] {
-    margin-bottom: -2;
-  }
-
-  .mobile\:mb-\[-2px\] {
-    margin-bottom: -2px;
-  }
-
   .mobile\:mb-\[-31px\] {
     margin-bottom: -31px;
   }
@@ -713,10 +737,98 @@ body {
   .mobile\:w-\[335px\] {
     width: 335px;
   }
+
+  .mobile\:justify-center {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 1440px) {
+  .laptop\:right-\[-1px\] {
+    right: -1px;
+  }
+
+  .laptop\:right-\[100px\] {
+    right: 100px;
+  }
+
+  .laptop\:top-\[17px\] {
+    top: 17px;
+  }
+
+  .laptop\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
+  .laptop\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .laptop\:mb-\[115px\] {
+    margin-bottom: 115px;
+  }
+
+  .laptop\:ml-auto {
+    margin-left: auto;
+  }
+
+  .laptop\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .laptop\:hidden {
     display: none;
+  }
+
+  .laptop\:h-\[58px\] {
+    height: 58px;
+  }
+
+  .laptop\:h-full {
+    height: 100%;
+  }
+
+  .laptop\:w-\[84\%\] {
+    width: 84%;
+  }
+
+  .laptop\:w-\[87px\] {
+    width: 87px;
+  }
+
+  .laptop\:w-full {
+    width: 100%;
+  }
+
+  .laptop\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .laptop\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .laptop\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .laptop\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .laptop\:pl-\[165px\] {
+    padding-left: 165px;
+  }
+
+  .laptop\:text-left {
+    text-align: left;
+  }
+
+  .laptop\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }

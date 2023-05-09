@@ -7,6 +7,7 @@ module.exports = {
       "soft-red": "hsl(0, 93%, 68%)",
       "dark-grayish-red": "hsl(0, 6%, 24%)",
       "light-red": "#F49798",
+      pink: "#F9CDCE",
     },
     screens: {
       mobile: "375px",
